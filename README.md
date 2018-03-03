@@ -7,6 +7,7 @@ Expose Kubernetes service:
 ```bash
 kubectl run -it --rm --restart=Never ngrok \
 --image=stefanprodan/ngrok \
+--image-pull-policy=Always \
 -- http service.namespace:9898
 ```
 
