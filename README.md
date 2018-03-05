@@ -1,6 +1,6 @@
-# ngrok docker image
+# ngrok
 
-Alpine image with ngrok, curl and openssl
+Alpine Docker image with ngrok, curl, openssl an unzip.
 
 Expose Kubernetes service:
 
@@ -14,7 +14,7 @@ kubectl run -it --rm --restart=Never ngrok \
 Expose Docker Swarm service:
 
 ```bash
-docker run -it --rm --name=ngrk \
+docker run -it --rm --name=ngrok \
 --net=my_overlay_netowrk \
 stefanprodan/ngrok \
 http my_service:8080
